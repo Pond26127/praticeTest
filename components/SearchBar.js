@@ -4,6 +4,10 @@ import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplet
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
+{/* Left button on search bar is start on line 34 */}
+{/* Right button on search bar is start on line 40 */}
+{/* Search bar is start on line 16 to 32 */}
+
 
 export default function SearchBar() {
     return (
@@ -32,7 +36,8 @@ export default function SearchBar() {
                         <Ionicons name='location-sharp' size={24}/>
                     </View>
                 )}
-                renderRightButton={() => (
+                
+                renderRightButton={() => ( 
                     <View 
                         style={{
                             backgroundColor: 'white',
@@ -53,9 +58,6 @@ export default function SearchBar() {
                     </View>
                 )}
             />
-
-            
         </View>
-
     );
-}  
+};
