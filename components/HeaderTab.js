@@ -8,23 +8,32 @@ export default function HeaderTab() {
     const [activeTab , setActiveTab] = useState("Delivery");
 
     return (
-        <View style={{flexDirection: "row" , alignSelf: "center"}}>
-            <HeaderButton 
-                text = 'Delivery' 
-                btnColor = 'black' 
-                textColor = 'white'
-                activeTab={activeTab} 
-                setActiveTab={setActiveTab} />
+        <View>
 
-            <HeaderButton 
-                text = 'Pickup' 
-                btnColor = 'white' 
-                textColor = 'black'
-                activeTab={activeTab} 
-                setActiveTab={setActiveTab} />
+        
+            <View style={{flexDirection: "row" , alignSelf: "center"}}>
+                <HeaderButton 
+                    text = 'Delivery' 
+                    btnColor = 'black' 
+                    textColor = 'white'
+                    activeTab={activeTab} 
+                    setActiveTab={setActiveTab} />
 
+                <HeaderButton 
+                    text = 'Pickup' 
+                    btnColor = 'white' 
+                    textColor = 'black'
+                    activeTab={activeTab} 
+                    setActiveTab={setActiveTab} />
+
+            </View>
+            <View style={{flexDirection: 'row', alignItems: 'flex-start'}}>
+                <HeaderButton 
+                    text = 'Login' 
+                    btnColor = 'white' 
+                    textColor = 'black'  />
+            </View>
         </View>
-
     );
 }
 
