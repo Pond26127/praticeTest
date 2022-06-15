@@ -9,9 +9,34 @@ import RestaurantItems, { localRestaurants } from './components/RestaurantItems'
 import { Divider } from 'react-native-elements';
 import BottomTabs from './components/BottomTabs';
 
+const YELP_API_KEY = 'EW_UMnYyT6QxIRHVNWIMFn3STDLsf-_jLytWfzpSzCgTPn93AnwB_SkySQEVeKNgnHp8iFo7VzVXeHxMKBd_NYIdwyD1icW7kZUonwTzD2jkpO-swBPReXm0aUqpYnYx';
+
 
 export default function App() {
     const [restaurantData , setRestaurantData] = React.useState(localRestaurants);
+
+    const getRestaurantsFromYelp = () => {
+      const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=Sandiego`;
+  
+      const apiOptions = {
+        headers: {
+          Authorization: `Bearer ${YELP_API_KEY}`,
+        },
+      };
+  
+      return fetch(yelpUrl, apiOptions)
+        .then((res) => res.json())
+        .then((json) =>
+          setRestaurantData(
+            json.businesses
+          )
+        );
+    };
+
+    useEffect(() => {
+      getRestaurantsFromYelp();
+    }, []);
+
   return (
     <SafeAreaView style={{ backgroundColor: '#eee' , flex: 1}}>
       <View style={{ backgroundColor: 'white' , padding: 15}}>
