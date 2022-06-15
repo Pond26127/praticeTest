@@ -54,7 +54,7 @@ export default function RestaurantItems(props) {
 
 const RestaurantImage = (props) => (
     <>
-        <Image source = {{ uri: props.image_url }}
+        <Image source = {{ uri: props.image_url, }}
         style={{ width: '100%' , height: 200 }}
         />
         <TouchableOpacity style={{ position: 'absolute' , right: 20 , top: 20 }}>
