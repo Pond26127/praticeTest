@@ -1,10 +1,18 @@
 import React from "react";
 import {View , Text} from 'react-native'
-import Home from './screens/Home';
+import { Divider } from "react-native-elements/dist/divider/Divider";
+import About from "../components/Page.RestaurantDetail/About";
+import MenuItem from "../components/Page.RestaurantDetail/MenuItem";
+
 
 
 export default function RestaurantDetail() {
-    return (<View>
-        <Text>asdf</Text>
-    </View>);
+    return (
+        <View>
+            <About />
+            <Divider width={1.8} style={{ marginVertical: 20}} />
+            <MenuItem />
+        </View>
+    
+    );
 }

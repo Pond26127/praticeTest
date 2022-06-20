@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { Alert, StyleSheet, Text, View , SafeAreaView, ScrollView } from 'react-native';
 import React , {useEffect , useState} from 'react'
-import HeaderTab from '../components/HeaderTab';
-import SearchBar from '../components/SearchBar';
-import Catagories from '../components/Catagories';
-import RestaurantItems, { localRestaurants } from '../components/RestaurantItems';
+import HeaderTab from '../components/Page.Home/HeaderTab';
+import SearchBar from '../components/Page.Home/SearchBar';
+import Catagories from '../components/Page.Home/Catagories';
+import RestaurantItems, { localRestaurants } from '../components/Page.Home/RestaurantItems';
 import { Divider } from 'react-native-elements';
-import BottomTabs from '../components/BottomTabs';
+import BottomTabs from '../components/Page.Home/BottomTabs';
 
 const YELP_API_KEY = 'EW_UMnYyT6QxIRHVNWIMFn3STDLsf-_jLytWfzpSzCgTPn93AnwB_SkySQEVeKNgnHp8iFo7VzVXeHxMKBd_NYIdwyD1icW7kZUonwTzD2jkpO-swBPReXm0aUqpYnYx';
 

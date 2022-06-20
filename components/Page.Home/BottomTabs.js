@@ -11,7 +11,7 @@ export default function BottomTabs() {
             marginHorizontal: 30 , 
             justifyContent:'space-between'
         }}>
-            <Icon icon='home' Text='home' />
+            <Icon icon='home' Text='Home' />
             <Icon icon='search' Text='Browse' />
             <Icon icon='receipt' Text='Order' />
             <Icon icon='shopping-bag' Text='Shop' />
@@ -19,7 +19,7 @@ export default function BottomTabs() {
             
         </View>
 
-    );
+    ); 
 }
 
 const Icon = (props) => (
