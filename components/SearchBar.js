@@ -9,11 +9,18 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 {/* Search bar is start on line 16 to 32 */}
 
 
-export default function SearchBar() {
+export default function SearchBar({cityHandler}) {
     return (
         <View style={{ marginTop: 15, flexDirection: 'row' }}>
 
-            <GooglePlacesAutocomplete 
+            <GooglePlacesAutocomplete
+                query={{key: 'AIzaSyBxp4IX-XV3clwZdcD0ngFgHJvtBtnEjqg'}}
+                onPress={(data , details = null) => {
+                    console.log(data.description)
+                    const city = data.description.split(',')[0];
+                    cityHandler(city);
+                }}
+
                 placeholder="Search"
                 styles={{
                     textInput: {
