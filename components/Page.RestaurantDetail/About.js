@@ -1,7 +1,7 @@
 import React from "react";
-import {View , Text , Image} from 'react-native'
+import {View , Text , Image} from 'react-native';
 
-const image = 'https://media-cdn.tripadvisor.com/media/photo-s/19/c3/62/df/variety-of-korean-appetizers.jpg';
+const image_url = 'https://media-cdn.tripadvisor.com/media/photo-s/19/c3/62/df/variety-of-korean-appetizers.jpg';
 const title = 'Korea Noodle Kitchen'
 const description = 'Korea * Spicy Food * $$ ';
 
@@ -11,7 +11,7 @@ export default function About() {
     return (
 
     <View>
-        <RestaurantImage image={image} /> 
+        <RestaurantImage image={image_url} /> 
         <RestaurantTitle title={title} /> 
         <RestaurantDescription description={description} /> 
     </View>
@@ -20,7 +20,7 @@ export default function About() {
 }
 
 const RestaurantImage = (props) => (
-    <Image source={{Uri: props.image}} 
+    <Image source={{ uri: props.image }} 
         style={{ width: '100%' , height: 180 }}/>
 )
 

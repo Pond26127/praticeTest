@@ -1,6 +1,6 @@
 import React from "react";
-import {View , Text, Image, TouchableOpacity} from 'react-native'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons' 
+import {View , Text, Image, TouchableOpacity} from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export const localRestaurants = [
     {
@@ -54,7 +54,7 @@ export default function RestaurantItems(props) {
 
 const RestaurantImage = (props) => (
     <>
-        <Image source = {{ uri: props.image_url, }}
+        <Image source = {{ uri: props.image, }}
         style={{ width: '100%' , height: 200 }}
         />
         <TouchableOpacity style={{ position: 'absolute' , right: 20 , top: 20 }}>
