@@ -1,5 +1,5 @@
 import React from "react";
-import {View , Text , Image, StyleSheet} from 'react-native'
+import {View , Text , Image, StyleSheet , ScrollView} from 'react-native'
 
 
 const foods = [
@@ -43,14 +43,44 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         margin: 20,
+    },
+
+    titleStyle: {
+        fontWeight: '600',
+        fontSize: 19,
+
     }
-})
+});
 
 
 export default function MenuItem() {
     return (
-        <View>
-            <Text></Text>
-        </View>
-    )
+        <>
+            {foods.map((food, index) =>(
+                <View 
+                    style={style.menuItemStyle} key={index}>
+
+                    < FoodInfo food={foods[index]} />
+                    < FoodImage food={foods[index]} />
+                </View>
+            ))}
+        </>
+    );
 }
+
+const FoodInfo = (props) => (
+    <View 
+        style={{width: 240 , 
+        justifyContent: 'space-evenly'}}>
+
+        <Text style={style.titleStyle}>{props.food.title}</Text>
+        <Text>{props.food.description}</Text>
+        <Text>{props.food.price}</Text>
+
+    </View>
+);
+
+const FoodImage = (props) => (
+    <Image source={{uri: props.food.image}} style={{width: 100 , height: 100 , borderRadius: 8}} />
+)
+
