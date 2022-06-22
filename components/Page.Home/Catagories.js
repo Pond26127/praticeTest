@@ -41,6 +41,7 @@ export default function Catagories() {
             backgroundColor: '#fff',
             paddingVertical: 10,
             paddingLeft: 20,
+            
         }}>
             <ScrollView horizontal showsHorizontalScrollIndicator = {false}>
 
@@ -48,7 +49,7 @@ export default function Catagories() {
                 {/* loop start here */}
 
                 {items.map((item, index) => (
-                    <View style={{ alignItems: 'center' , marginRight: 30}}>
+                    <View style={{ alignItems: 'center' , marginRight: 30}} key={index}>
                         <Image source = {items[index].image} style={{
                             width: 60,
                             height: 40,

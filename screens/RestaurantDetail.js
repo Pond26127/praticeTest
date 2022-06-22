@@ -7,10 +7,10 @@ import MenuItem from "../components/Page.RestaurantDetail/MenuItem";
 
 
 
-export default function RestaurantDetail() {
+export default function RestaurantDetail({ route }) {
     return (
         <View>
-            <About />
+            <About route={route} />
             <Divider width={1.8} style={{ marginVertical: 20}} />
             <MenuItem />
         </View>
