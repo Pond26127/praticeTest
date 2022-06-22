@@ -1,7 +1,8 @@
 import React from "react";
-import {View , Text , Image, StyleSheet , ScrollView} from 'react-native'
+import {View , Text , Image, StyleSheet , ScrollView } from 'react-native'
 import { Divider } from "react-native-elements";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
+
 
 
 const foods = [
@@ -50,8 +51,7 @@ const style = StyleSheet.create({
     titleStyle: {
         fontWeight: '600',
         fontSize: 19,
-
-    }
+    },
 });
 
 export default function MenuItem() {
