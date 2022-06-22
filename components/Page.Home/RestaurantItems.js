@@ -2,32 +2,6 @@ import React from "react";
 import {View , Text, Image, TouchableOpacity} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export const localRestaurants = [
-    {
-      name: "Beachside Bar",
-      image_url:"https://www.bkkmenu.com/files/2019/06/YaoRestaurant-5.jpg",
-      categories: ["Cafe", "Bar"],
-      price: "$$",
-      reviews: 1244,
-      rating: 4.5,
-    },
-    {
-      name: "Benihana",
-      image_url:"https://www.eatchillwander.com/wp-content/uploads/2019/06/gaa-restaurant-bangkok24-1024x683.jpg",
-      categories: ["Cafe", "Bar"],
-      price: "$$",
-      reviews: 1244,
-      rating: 3.7,
-    },
-    {
-      name: "India's Grill",
-      image_url:"https://thailawyers.com/wp-content/uploads/2018/10/Open-restaurant-in-Thailand.jpg",
-      categories: ["Indian", "Restaurant"],
-      price: "$$",
-      reviews: 700,
-      rating: 4.9,
-    },
-  ];
 
 export default function RestaurantItems({ navigation , ...props}) {
     return (
