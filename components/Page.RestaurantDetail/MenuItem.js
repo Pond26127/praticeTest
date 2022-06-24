@@ -1,5 +1,5 @@
 import React from "react";
-import {View , Text , Image, StyleSheet , ScrollView } from 'react-native'
+import {View , Text , Image, StyleSheet , ScrollView } from 'react-native';
 import { Divider } from "react-native-elements";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 
@@ -37,6 +37,7 @@ const foods = [
         price: "$13.50",
         image:"https://thestayathomechef.com/wp-content/uploads/2017/08/Most-Amazing-Lasagna-2-e1574792735811.jpg",
     },
+     
 ];
 
 
@@ -56,21 +57,23 @@ const style = StyleSheet.create({
 
 export default function MenuItem() {
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
-            {foods.map((food, index) =>(
-                <View key={index}>
-                    <View style={style.menuItemStyle}>
-                        <BouncyCheckbox iconStyle={{borderColor: 'lightgray' , borderRadius: 0 }} fillColor='green' />
-                        < FoodInfo food={food} />
-                        < FoodImage food={food} />
+        <>
+            <ScrollView showsVerticalScrollIndicator={false} >
+                {foods.map((food, index) =>(
+                    <View key={index}>
+                        <View style={style.menuItemStyle}>
+                            <BouncyCheckbox iconStyle={{borderColor: 'lightgray' , borderRadius: 0 }} fillColor='green' />
+                            < FoodInfo food={food} />
+                            < FoodImage food={food} />
+                        </View>
+                        <Divider 
+                            width={0.5} 
+                            orientation='vertical' 
+                            style={{marginHorizontal: 20}} />
                     </View>
-                    <Divider 
-                        width={0.5} 
-                        orientation='vertical' 
-                        style={{marginHorizontal: 20}} />
-                </View>
-            ))}
-        </ScrollView>
+                ))}
+            </ScrollView>
+        </>
     );
 }
  
