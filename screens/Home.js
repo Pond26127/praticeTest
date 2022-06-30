@@ -40,7 +40,7 @@ export default function Home({navigation}) {
     }, [city , activeTab]);
 
   return (
-    <SafeAreaView style={{ backgroundColor: '#eee' , flex: 1}}>
+    <SafeAreaView style={styles.AndroidSafeArea}>
       <View style={{ backgroundColor: 'white' , padding: 15}}>
         <HeaderTab activeTab={activeTab} setActiveTab={setActiveTab} />
         <SearchBar cityHandler={setCity} />
@@ -62,4 +62,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  AndroidSafeArea: {
+    flex: 1,
+    backgroundColor: '#eee' ,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+  },
+
 });
